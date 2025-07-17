@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# TensorFlow/Keras
+*.h5
+*.hdf5
+*.pb
+logs/
+checkpoints/
+
+# Dataset (too large for git)
+data/
+*.zip
+*.tar.gz
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Results (models are large)
+results/*.h5
+results/*.hdf5 
