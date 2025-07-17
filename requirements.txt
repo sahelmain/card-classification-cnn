@@ -5,6 +5,10 @@ matplotlib
 scikit-learn
 pillow
 
+# Web application dependencies  
+flask>=2.0
+werkzeug>=2.0
+
 # Visualization dependencies
 plotly>=5.0
 seaborn>=0.11
