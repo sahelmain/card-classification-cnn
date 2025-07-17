@@ -46,5 +46,4 @@ results/*.h5
 results/*.hdf5
 
 # Docker
-.dockerignore
 logs/ 

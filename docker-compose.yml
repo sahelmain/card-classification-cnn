@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  card-classifier:
+    build: .
+    container_name: card-classification-cnn
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TF_CPP_MIN_LOG_LEVEL=2
+    volumes:
+      - ./data:/app/data:ro  # Mount dataset as read-only
+      - ./results:/app/results  # Mount results for persistence
+      - ./logs:/app/logs  # Mount logs directory
+    ports:
+      - "8080:8080"  # For future web interface
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import tensorflow as tf; print('OK')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+          cpus: '2.0'
+        reservations:
+          memory: 2G
+          cpus: '1.0'
+
+networks:
+  default:
+    name: card-classification-network 
