@@ -5,6 +5,11 @@ matplotlib
 scikit-learn
 pillow
 
+# Visualization dependencies
+plotly>=5.0
+seaborn>=0.11
+dash>=2.0
+
 # Development dependencies
 pytest>=6.0
 flake8>=4.0
